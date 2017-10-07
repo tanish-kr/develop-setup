@@ -1,0 +1,21 @@
+tap caskroom/cask
+tap caskroom/versions
+tap homebrew/binary
+install brew-cask
+install vim
+install mysql
+install nginx
+install mongodb
+install zsh
+install ant
+install jsonpp
+install postgresql
+install phantomjs
+install nkf
+install jsonpp
+install packer
+install rbenv
+install rbenv-gemset
+install rbenv-gem-rehash
+install gradle
+install 

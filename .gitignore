@@ -1,0 +1,12 @@
+.DS_Store
+*.swp
+*.swo
+
+config/ssh/*
+!config/ssh/.gitkeep
+config/mongodb/*
+!config/mongodb/.gitkeep
+config/mysql/*
+!config/mysql/.gitkeep
+config/postgresql/*
+!config/postgresql/.gitkeep
