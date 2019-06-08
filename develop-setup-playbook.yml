@@ -1,0 +1,8 @@
+---
+- hosts: all
+  sudo: no
+  user: '{{ user }}'
+
+  roles:
+    - common
+    - '{{ os_name }}'

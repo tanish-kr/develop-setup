@@ -1,0 +1,81 @@
+- name: Install packages
+  package: name={{ item }} state=latest
+  with_items:
+    - lua
+    - tmux
+    - gcc
+    - wget
+    - zsh
+    - ant
+    - qt
+    - openssl
+    - jq
+    - nkf
+    - git
+    - maven
+
+- name: Install awscli
+  pip:
+    name: awscli
+    executable: pip3
+
+- name: Generate directory
+  file:
+    path: '{{ item }}'
+    state: directory
+    mode: '0755'
+  with_items:
+    - ~/workspace/ruby
+    - ~/workspace/java
+    - ~/workspace/php
+    - ~/workspace/python
+    - ~/workspace/javascript
+    - ~/workspace/cpp
+    - ~/workspace/scala
+    - ~/workspace/cocos
+    - ~/workspace/unity
+    - ~/workspace/android
+    - ~/workspace/ios
+    - ~/workspace/swift
+    - ~/workspace/c
+    - ~/workspace/elixir
+    - ~/workspace/cSharp
+    - ~/workspace/docker
+    - ~/.go
+    - ~/vbox
+    - ~/tool
+
+- name: Git clone dotfiles
+  git:
+    repo: https://github.com/kitaro-tn/dotfiles.git
+    dest: ~/.dotfiles
+    accept_hostkey: yes
+
+- name: Setup dotfiles
+  shell: ./dotfiles.sh install
+  args:
+    chdir: ~/.dotfiles
+  check_mode: no
+  when: not ansible_check_mode
+
+- name: Setup anyenv
+  git:
+    repo: https://github.com/anyenv/anyenv.git
+    dest: ~/.anyenv
+    accept_hostkey: yes
+
+- name: Setup anyenv envs install
+  shell: |
+    anyenv init
+    anyenv install rbenv
+    anyenv install phpenv
+    anyenv install pyenv
+    anyenv install nodenv
+    anyenv install goenv
+    anyenv install scalaenv
+    anyenv install swiftenv
+    anyenv install jenv
+  args:
+    chdir: ~/.anyenv/bin/
+  check_mode: no
+  when: not ansible_check_mode

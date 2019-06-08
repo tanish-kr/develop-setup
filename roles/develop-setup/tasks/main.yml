@@ -1,0 +1,24 @@
+- name: Install packages
+  package: name={{ item }} state=latest
+  with_items:
+    - lua
+    - tmux
+    - gcc
+    - wget
+    - mysql
+    - mongodb
+    - nginx
+    - zsh
+    - ant
+    - qt
+    - openssl
+    - sqlite
+    - jq
+    - postgresql
+    - nkf
+    - maven
+    - android-sdk
+    - android-ndk
+
+- name: Install packages for Mac OSX
+

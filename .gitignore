@@ -10,3 +10,4 @@ config/mysql/*
 !config/mysql/.gitkeep
 config/postgresql/*
 !config/postgresql/.gitkeep
+.vagrant

@@ -4,6 +4,14 @@
 
 ## Useage
 
+- 先にsshの設定
+- githubで利用するkeyを保存しておくこと
+
+```
+$ ssh-add <Github key>
+```
+
+
 ```
 ./setup.sh
 ```
