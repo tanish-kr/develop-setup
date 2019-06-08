@@ -3,6 +3,7 @@
 if [[ "$(uname -a)" =~ 'Darwin' ]]; then
   # 1. Xcode command line tool install
   xcode-select --install
+  sudo xcodebuild -license accept
   # 2. brew install
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
   # 3. brew update

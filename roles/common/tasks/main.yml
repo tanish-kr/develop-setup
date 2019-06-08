@@ -6,10 +6,7 @@
     - gcc
     - wget
     - zsh
-
-- name: Install packages super user
-  package: name={{ item }} state=latest
-  with_items:
+    - java
     - ant
     - qt
     - openssl
