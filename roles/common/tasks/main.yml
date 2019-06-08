@@ -6,7 +6,6 @@
     - gcc
     - wget
     - zsh
-    - java
     - qt
     - openssl
     - jq
