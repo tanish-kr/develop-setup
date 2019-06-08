@@ -11,14 +11,10 @@
 - name: Install Packages
   homebrew: name={{ item.name }} state=latest install_options={{ item.install_options | default() }}
   with_items:
-    - { name: 'brew-cask' }
-    - { name: 'vim', install_options: '--with-lua' }
+    - { name: 'vim', install_options: 'with-lua' }
     - { name: 'mysql' }
     - { name: 'postgresql' }
     - { name: 'redis' }
-    - { name: 'android-sdk' }
-    - { name: 'android-ndk' }
-    - { name: 'android-platform-tools' }
 
 - name: Install homebrew cask packages
   environment:
@@ -41,7 +37,7 @@
     - { name: 'google-japanease-ime' }
     - { name: 'macdown' }
     - { name: 'coteditor' }
-    - { name: 'macvim', install_options: '--with-cscope --with-lua --HEAD' }
+    - { name: 'macvim', install_options: 'with-cscope', 'with-lua', 'HEAD' }
     - { name: 'android-studio' }
     - { name: 'docker' }
     - { name: 'eclipse-ide' }

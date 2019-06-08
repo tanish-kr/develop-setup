@@ -62,18 +62,18 @@
     dest: ~/.anyenv
     accept_hostkey: yes
 
-- name: Setup anyenv envs install
-  shell: |
-    anyenv init
-    anyenv install rbenv
-    anyenv install phpenv
-    anyenv install pyenv
-    anyenv install nodenv
-    anyenv install goenv
-    anyenv install scalaenv
-    anyenv install swiftenv
-    anyenv install jenv
-  args:
-    chdir: ~/.anyenv/bin/
-  check_mode: no
-  when: not ansible_check_mode
+    #- name: Setup anyenv envs install
+    #  shell: |
+    #    ./anyenv init
+    #    ./anyenv install rbenv
+    #    ./anyenv install phpenv
+    #    ./anyenv install pyenv
+    #    ./anyenv install nodenv
+    #    ./anyenv install goenv
+    #    ./anyenv install scalaenv
+    #    ./anyenv install swiftenv
+    #    ./anyenv install jenv
+    #  args:
+    #    chdir: ~/.anyenv/bin/
+    #  check_mode: no
+    #  when: not ansible_check_mode
