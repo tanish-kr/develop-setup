@@ -7,13 +7,11 @@
     - wget
     - zsh
     - java
-    - ant
     - qt
     - openssl
     - jq
     - nkf
     - git
-    - maven
 
 - name: Install awscli
   pip:
