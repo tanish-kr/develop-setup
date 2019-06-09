@@ -5,13 +5,12 @@
     - 'd12frosted/emacs-plus'
     - 'caskroom/cask'
     - 'caskroom/versions'
-    - 'homebrew/binary'
-    - 'josegonzalez/homebrew-php'
+    # - 'homebrew/binary'
+    # - 'josegonzalez/homebrew-php'
 
 - name: Install Packages
   homebrew: name={{ item.name }} state=latest install_options={{ item.install_options | default() }}
   with_items:
-    - { name: 'vim', install_options: 'with-lua' }
     - { name: 'mysql' }
     - { name: 'postgresql' }
     - { name: 'redis' }
