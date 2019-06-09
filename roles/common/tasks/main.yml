@@ -48,6 +48,7 @@
     repo: https://github.com/kitaro-tn/dotfiles.git
     dest: ~/.dotfiles
     accept_hostkey: yes
+    force: yes
 
 - name: Setup dotfiles
   shell: ./dotfiles.sh install
@@ -61,6 +62,7 @@
     repo: https://github.com/anyenv/anyenv.git
     dest: ~/.anyenv
     accept_hostkey: yes
+    force: yes
 
     #- name: Setup anyenv envs install
     #  shell: |
