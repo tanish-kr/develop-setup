@@ -45,7 +45,7 @@
 
 - name: Git clone dotfiles
   git:
-    repo: https://github.com/kitaro-tn/dotfiles.git
+    repo: https://github.com/tanish-kr/dotfiles.git
     dest: ~/.dotfiles
     accept_hostkey: yes
     force: yes
