@@ -19,6 +19,3 @@
     - maven
     - android-sdk
     - android-ndk
-
-- name: Install packages for Mac OSX
-

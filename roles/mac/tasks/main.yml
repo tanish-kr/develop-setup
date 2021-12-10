@@ -14,6 +14,8 @@
     - { name: 'mysql' }
     - { name: 'postgresql' }
     - { name: 'redis' }
+    - { name: 'nginx' }
+    - { name: 'sqlite' }
 
 - name: Install homebrew cask packages
   environment:
@@ -43,8 +45,11 @@
     - { name: 'postman' }
     - { name: 'unity' }
     - { name: 'unity-hub' }
-    - { name: 'qfinder-pro' }
     - { name: 'figma' }
     - { name: 'appcleaner' }
     - { name: 'lepton' }
     - { name: 'karabiner-elements' }
+    - { name: 'microsoft-office' }
+    - { name: 'messenger' }
+    - { name: 'gimp' }
+    - { name: 'asana' }
