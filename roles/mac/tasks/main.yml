@@ -53,6 +53,5 @@
     - { name: 'messenger' }
     - { name: 'gimp' }
     - { name: 'asana' }
-    - { name: 'zoom' }
     - { name: 'discord' }
     - { name: 'zoom' }

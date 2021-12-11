@@ -19,4 +19,10 @@ elif [[ "$(uname -a)" =~ 'ubuntu' ]]; then
 elif [[ "$(uname -a)" =~ 'centos' ]]; then
   sudo yum -y update
   yum install -y ansible
+elif [[ "$(uname -a)" =~ 'Microsoft' ]]; then
+  # Windows for Ubuntu上でインストールする
+  sudo apt -y update
+  sudo apt install -y ansible
+
+  ansible-playbook -i localhost  -e os_name=windows -e user=$USER develop-setup-playbook.yml
 fi

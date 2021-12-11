@@ -1,0 +1,31 @@
+- name: Windows Update
+  win_updates:
+    category_names:
+      - CriticalUpdates
+      - SecurityUpdates
+    state: installed
+  register: update_result
+
+- name: Install chocolatey
+  win_command: "Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))"
+  become: yes
+
+- name: Install chocolatey Packages
+  win_chocolatey: name={{ item.name }}
+  with_items:
+    - { name: 'googlechrome' }
+    - { name: 'slack' }
+    - { name: 'discord' }
+    - { name: 'docker-desktop' }
+    - { name: 'vscode' }
+    - { name: 'googlejapaneseinput' }
+    - { name: 'vim' }
+    - { name: 'office365business' }
+    - { name: 'postman' }
+    - { name: 'virtualbox' }
+    - { name: 'steam-client' }
+    - { name: 'lhaplus' }
+    - { name: 'microsoft-windows-terminal' }
+    - { name: 'cmder' }
+    - { name: 'kindle' }
+    - { name: 'avastfreeantivirus' }
