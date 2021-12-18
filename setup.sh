@@ -16,10 +16,12 @@ if [[ "$(uname -a)" =~ 'Darwin' ]]; then
 elif [[ "$(uname -a)" =~ 'ubuntu' ]]; then
   sudo apt -y update
   apt install -y ansible
+  ansible-playbook -i localhost  -e os_name=ubuntu -e user=$USER develop-setup-playbook.yml
 elif [[ "$(uname -a)" =~ 'centos' ]]; then
   sudo yum -y update
   yum install -y ansible
-elif [[ "$(uname -a)" =~ 'Microsoft' ]]; then
+  ansible-playbook -i localhost  -e os_name=centos -e user=$USER develop-setup-playbook.yml
+elif [[ "$(uname -a)" =~ '[Mm]icrosoft' ]]; then
   # Windows for Ubuntu上でインストールする
   sudo apt -y update
   sudo apt install -y ansible
