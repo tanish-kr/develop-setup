@@ -1,6 +1,6 @@
 ---
 - hosts: all
-  sudo: no
+  become: no
   user: '{{ user }}'
 
   roles:

@@ -12,10 +12,10 @@
     - nkf
     - git
 
-- name: Install awscli
-  pip:
-    name: awscli
-    executable: pip3
+# - name: Install awscli
+#   pip:
+#     name: awscli
+#     executable: pip3
 
 - name: Generate directory
   file:

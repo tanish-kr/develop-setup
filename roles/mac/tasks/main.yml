@@ -55,3 +55,4 @@
     - { name: 'asana' }
     - { name: 'discord' }
     - { name: 'zoom' }
+    - { name: 'awscli' }
