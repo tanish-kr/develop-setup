@@ -1,3 +1,17 @@
+- name: Install packages
+  package: name={{ item }} state=latest
+  with_items:
+    - lua
+    - tmux
+    - gcc
+    - wget
+    - zsh
+    - qt
+    - openssl
+    - jq
+    - nkf
+    - git
+
 - name: homebrew tap packages
   homebrew_tap: name={{ item }}
   with_items:

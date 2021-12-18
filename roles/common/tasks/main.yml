@@ -1,16 +1,16 @@
-- name: Install packages
-  package: name={{ item }} state=latest
-  with_items:
-    - lua
-    - tmux
-    - gcc
-    - wget
-    - zsh
-    - qt
-    - openssl
-    - jq
-    - nkf
-    - git
+# - name: Install packages
+#   package: name={{ item }} state=latest
+#   with_items:
+#     - lua
+#     - tmux
+#     - gcc
+#     - wget
+#     - zsh
+#     - qt
+#     - openssl
+#     - jq
+#     - nkf
+#     - git
 
 # - name: Install awscli
 #   pip:
