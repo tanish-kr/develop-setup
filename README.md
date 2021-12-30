@@ -34,6 +34,18 @@ Macで設定する物をスクリプトにしていく
 
 テスト用にやりたかったらしい。。。 しかしOSXは有料なので無理があったようだ。
 
+### Windowsでの実行
+
+`chocolatey_install.ps1`を実行する前に以下を実行する
+
+```powershell
+Set-ExecutionPolicy AllSigned
+```
+
+```powershell
+.\chocolatey_install.ps1
+```
+
 ## 注意事項
 
 sshやdbに関してはgitには上げないで所持しているPCあるいはサーバから持ってくること。

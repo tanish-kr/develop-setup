@@ -15,4 +15,5 @@ choco install -y microsoft-windows-terminal
 choco install -y cmder
 choco install -y kindle
 choco install -y avastfreeantivirus
-
+choco install -y powertoys
+choco install -y autohotkey
