@@ -9,10 +9,13 @@ if [[ "$(uname -a)" =~ 'Darwin' ]]; then
   # 3. brew update
   brew update
   export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+
+  ./brew.sh
+  ./common.sh
   # 4. install ansible
-  brew install ansible
+  # brew install ansible
   # 5. execute ansible playbook
-  ansible-playbook -i localhost  -e os_name=mac -e user=$USER develop-setup-playbook.yml
+  # ansible-playbook -i localhost  -e os_name=mac -e user=$USER develop-setup-playbook.yml
 elif [[ "$(uname -a)" =~ 'ubuntu' ]]; then
   sudo apt -y update
   apt install -y ansible
