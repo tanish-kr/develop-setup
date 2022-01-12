@@ -8,34 +8,34 @@
 
 echo "Install brew packages"
 
-brew tap caskroom/cask
-brew tap caskroom/versions
-brew tap homebrew/binary
-brew tap josegonzalez/homebrew-php
-brew install brew-cask
+#brew tap caskroom/cask
+#brew tap caskroom/versions
+#brew tap homebrew/binary
+#brew tap josegonzalez/homebrew-php
+#brew install brew-cask
 brew install lua
-brew install vim --with-lua
+brew install vim
 brew install tmux
 brew install gcc
 brew install wget
 brew install mysql
 brew install nginx
-brew install mongodb
+#brew install mongodb
 brew install zsh
 brew install ant
 brew install qt
 brew install openssl
 brew install sqlite
-brew install packer
+#brew install packer
 brew install jsonpp
 brew install jq
-brew install postgresql
-brew install phantomjs
-brew install memcached
-brew install redis
+#brew install postgresql
+#brew install phantomjs
+#brew install memcached
+#brew install redis
 brew install nkf
-brew install jenkins
-brew install packer
+#brew install jenkins
+#brew install packer
 brew install anyenv
 # brew install rbenv-gemset
 # brew install rbenv-gem-rehash
@@ -43,45 +43,43 @@ brew install gradle
 brew install sbt
 brew install ansible
 brew install git
-brew install dsnmasq
+#brew install dsnmasq
 # brew install pyenv
 # brew install pyenv-virtualenv
 # brew install phpenv
 # brew install --with-fpm --with-mysql php56
-brew install composer
-brew install maven
-brew install nodebrew
+#brew install composer
+#brew install maven
+#brew install nodebrew
 # brew install mecab
 # brew install mecab-ipadic
 # brew install mecab-unidic
 # brew install kakasi
 # brew install cabocha
-brew install android-platform-tools
-brew install android-sdk
-brew install android-ndk
+#brew install android-platform-tools
+#brew install android-sdk
+#brew install android-ndk
 brew install --cask iterm2
-brew install --cask java
+#brew install --cask java
 # brew install --cask eclipse-ide
 brew install --cask virtualbox
-brew install --cask firefox-developer-edition
+#brew install --cask firefox-developer-edition
 brew install --cask vagrant
 brew install --cask sequel-pro
 brew install --cask dropbox
 brew install --cask evernote
 brew install --cask skype
 brew install --cask google-chrome
-brew install --cask atom
-brew install --cask mou
-brew install --cask macvim --with-cscope --with-lua --HEAD
+# brew install --cask atom
+# brew install --cask mou
+# brew install --cask macvim --with-cscope --with-lua --HEAD
 # brew install --cask textwrangler
-brew install --cask google-japanease-ime
+#brew install --cask google-japanease-ime
 # brew install --cask libreoffice
 brew install --cask clipy
 brew install --cask slack
 # brew install --cask android-studio
 brew install --cask visual-studio-code
-brew install --cask google-chrome
-brew install --cask google-japanease-ime
 brew install --cask macdown
 brew install --cask coteditor
 brew install --cask postman
@@ -95,7 +93,7 @@ brew install --cask karabiner-elements
 brew install --cask microsoft-office
 brew install --cask messenger
 brew install --cask discord
-brew install --cask awscli
+#brew install --cask awscli
 
 echo "LaunchAgent settings"
 

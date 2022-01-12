@@ -2,8 +2,8 @@
 
 if [[ "$(uname -a)" =~ 'Darwin' ]]; then
   # 1. Xcode command line tool install
-  xcode-select --install
-  sudo xcodebuild -license accept
+  #xcode-select --install
+  #sudo xcodebuild -license accept
   # 2. brew install
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
   # 3. brew update
@@ -13,9 +13,9 @@ if [[ "$(uname -a)" =~ 'Darwin' ]]; then
   ./brew.sh
   ./common.sh
   # 4. install ansible
-  # brew install ansible
+  #brew install ansible
   # 5. execute ansible playbook
-  # ansible-playbook -i localhost  -e os_name=mac -e user=$USER develop-setup-playbook.yml
+  #ansible-playbook -i localhost  -e os_name=mac -e user=$USER develop-setup-playbook.yml
 elif [[ "$(uname -a)" =~ 'ubuntu' ]]; then
   sudo apt -y update
   apt install -y ansible
