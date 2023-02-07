@@ -1,105 +1,42 @@
 #!/bin/bash -ex
 
 # 2. brew install
-# ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-
-# 3. brew cask install
-# export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 echo "Install brew packages"
+exec $SHELL -l
 
-#brew tap caskroom/cask
-#brew tap caskroom/versions
-#brew tap homebrew/binary
-#brew tap josegonzalez/homebrew-php
-#brew install brew-cask
-brew install lua
-brew install vim
-brew install tmux
-brew install gcc
-brew install wget
-brew install mysql
-brew install nginx
-#brew install mongodb
-brew install zsh
-brew install ant
-brew install qt
-brew install openssl
-brew install sqlite
-#brew install packer
-brew install jsonpp
-brew install jq
-#brew install postgresql
-#brew install phantomjs
-#brew install memcached
-#brew install redis
-brew install nkf
-#brew install jenkins
-#brew install packer
-brew install anyenv
-# brew install rbenv-gemset
-# brew install rbenv-gem-rehash
-brew install gradle
-brew install sbt
-brew install ansible
-brew install git
-#brew install dsnmasq
-# brew install pyenv
-# brew install pyenv-virtualenv
-# brew install phpenv
-# brew install --with-fpm --with-mysql php56
-#brew install composer
-#brew install maven
-#brew install nodebrew
-# brew install mecab
-# brew install mecab-ipadic
-# brew install mecab-unidic
-# brew install kakasi
-# brew install cabocha
-#brew install android-platform-tools
-#brew install android-sdk
-#brew install android-ndk
-brew install --cask iterm2
-#brew install --cask java
-# brew install --cask eclipse-ide
-brew install --cask virtualbox
-#brew install --cask firefox-developer-edition
-brew install --cask vagrant
-brew install --cask sequel-pro
-brew install --cask dropbox
-brew install --cask evernote
-brew install --cask skype
-brew install --cask google-chrome
-# brew install --cask atom
-# brew install --cask mou
-# brew install --cask macvim --with-cscope --with-lua --HEAD
-# brew install --cask textwrangler
-#brew install --cask google-japanease-ime
-# brew install --cask libreoffice
-brew install --cask clipy
-brew install --cask slack
-# brew install --cask android-studio
-brew install --cask visual-studio-code
-brew install --cask macdown
-brew install --cask coteditor
-brew install --cask postman
-brew install --cask unity
-brew install --cask unity-hub
-brew install --cask figma
-brew install --cask appcleaner
-brew install --cask asana
-brew install --cask gimp
-brew install --cask karabiner-elements
-brew install --cask microsoft-office
-brew install --cask messenger
-brew install --cask discord
-#brew install --cask awscli
+brew bundle
 
-echo "LaunchAgent settings"
+asdf plugin add ruby
+asdf plugin add nodejs
+asdf plugin add yarn
+asdf plugin add python
+asdf plugin add java
+asdf plugin add golang
 
-if [ ! -d $HOME/Library/LaunchAgents ]; then
-  mkdir -p $HOME/Library/LaunchAgents
-fi
+asdf install ruby latest
+asdf install nodejs latest
+asdf install yarn latest
+asdf install python latest
+asdf install java latest
+asdf install golang latest
+
+asdf global ruby latest
+asdf global nodejs latest
+asdf global yarn latest
+asdf global python latest
+asdf global java latest
+asdf global golang latest
+
+curl "https://awscli.amazonaws.com/AWSCLIV2.pkg" -o "AWSCLIV2.pkg"
+sudo installer -pkg AWSCLIV2.pkg -target /
+
+# echo "LaunchAgent settings"
+
+# if [ ! -d $HOME/Library/LaunchAgents ]; then
+#   mkdir -p $HOME/Library/LaunchAgents
+# fi
 
 # 5. nginx setup
 # ln -sfv /usr/local/opt/nginx/*.nginx.plist $HOME/Library/LaunchAgents/

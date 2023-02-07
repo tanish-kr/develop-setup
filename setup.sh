@@ -5,10 +5,10 @@ if [[ "$(uname -a)" =~ 'Darwin' ]]; then
   #xcode-select --install
   #sudo xcodebuild -license accept
   # 2. brew install
-  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  # ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
   # 3. brew update
-  brew update
-  export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+  # brew update
+  # export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
   ./brew.sh
   ./common.sh
